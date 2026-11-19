@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI Universe</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#100e18;color:white;font-family:Arial,sans-serif}
+header{padding:20px;background:#191421;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:900;color:#ff77b9}
+nav a{color:white;text-decoration:none;margin-left:12px;font-size:12px}
+.hero{padding:100px 25px;background:linear-gradient(120deg,#25152e,#a34f87,#173c51);min-height:440px}
+.hero h1{font-size:65px;line-height:.95;margin:20px 0}
+.hero h1 span{color:#ff8fc7}
+.hero p{line-height:1.7;color:#eee;max-width:450px}
+button,.btn{background:#ff79b9;border:0;padding:13px 20px;border-radius:5px;font-weight:bold;color:#170e19;cursor:pointer;text-decoration:none;display:inline-block}
+section{padding:55px 22px}
+h2{font-size:30px}
+h2 span{color:#ff79b9}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:17px}
+.card{background:#211b2a;border-radius:10px;overflow:hidden;border:1px solid #ffffff20}
+.card img{width:100%;height:165px;object-fit:cover}
+.card div{padding:17px}
+.card p{color:#c7bdcc;line-height:1.5}
+.panel{background:#211b2a;padding:22px;border-radius:10px;margin-top:15px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}
+.tabs button{background:#393044;color:white}
+.tabs button.active{background:#ff79b9;color:#170e19}
+footer{padding:25px;text-align:center;color:#aaa;background:#191421}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">GTA VI UNIVERSE</div>
+<nav>
+<a href="#home">HOME</a>
+<a href="#characters">CAST</a>
+<a href="#locations">MAP</a>
+<a href="#garage">CARS</a>
+</nav>
+</header>
+
+<div class="hero" id="home">
+<p>THE ULTIMATE FAN EXPERIENCE</p>
+<h1>WELCOME TO<br><span>VICE CITY.</span></h1>
+<p>Discover the world of Grand Theft Auto VI. Explore Leonida, meet the characters and discover the vehicles.</p>
+<a class="btn" href="#locations">EXPLORE LEONIDA</a>
+</div>
+
+<section id="characters">
+<h2>THE <span>CHARACTERS</span></h2>
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600">
+<div><h3>Lucia Caminos</h3><p>One of the two central protagonists of GTA VI.</p></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600">
+<div><h3>Jason Duval</h3><p>The other central protagonist in the story.</p></div>
+</div>
+</div>
+</section>
+
+<section id="locations">
+<h2>EXPLORE <span>LEONIDA</span></h2>
+<div class="cards">
+<div class="card"><img src="https://images.unsplash.com/photo-1535498730771-e735b998cd64?w=600"><div><h3>Vice City</h3><p>Neon lights, beaches and city life.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=600"><div><h3>Leonida Keys</h3><p>Tropical coastlines and islands.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=600"><div><h3>Grassrivers</h3><p>Wild landscapes and wetlands.</p></div></div>
+</div>
+</section>
+
+<section id="garage">
+<h2>THE <span>GARAGE</span></h2>
+<p>Choose your favourite vehicle category.</p>
+<div class="tabs">
+<button class="active" onclick="showCar('Supercars',this)">Supercars</button>
+<button onclick="showCar('Muscle Cars',this)">Muscle Cars</button>
+<button onclick="showCar('Boats',this)">Boats</button>
+<button onclick="showCar('Off-Road',this)">Off-Road</button>
+</div>
+<div class="panel" id="car">
+<h3>SUPERCARS</h3>
+<p>Discover the high-performance vehicle category.</p>
+</div>
+</section>
+
+<section>
+<div class="panel">
+<h2>GTA VI <span>UNIVERSE</span></h2>
+<p>Your fan-made home for GTA VI characters, locations and vehicles.</p>
+<a class="btn" href="https://www.rockstargames.com/VI">OFFICIAL GTA VI WEBSITE</a>
+</div>
+</section>
+
+<footer>
+<p>GTA VI UNIVERSE — FAN-MADE WEBSITE</p>
+<p>Not affiliated with Rockstar Games.</p>
+</footer>
+
+<script>
+function showCar(name,button){
+document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));
+button.classList.add('active');
+document.getElementById('car').innerHTML='<h3>'+name.toUpperCase()+'</h3><p>Explore the '+name+' category in the GTA VI fan garage.</p>';
+}
+</script>
+</body>
+</html>
